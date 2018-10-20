@@ -87,13 +87,13 @@ void menu()
 		system("mode con cols=130 lines=50");
 		system("cls");
 		c("--------------------",7);
-		c("|       菜单       |",7);
+		c("|       menu       |",7);
 		c("--------------------",7);
-		c("|    1.开始游戏    |",sn);
+		c("|    1.start game  |",sn);
 		c("|                  |",7);
-		c("|     2.关于作者   |",co);
+		c("|     2.README     |",co);
 		c("|                  |",7);
-		c("|       q.退出     |",re);
+		c("|       q.exit     |",re);
 		c("--------------------",7);
 		a=getch();
 		if(a=='w'||a=='W')
@@ -128,7 +128,7 @@ void menu()
 			}
 			else if(co==127){
 				CLS;
-				cout<<"GitHub:https://github.com/ChinaMacrohard/Memory-strategy\n";
+				cout<<"GitHub:https://github.com/ChinaMacrohard/Memory-strategy\n\n";
 				cout<<"what is this?\n";
 				cout<<"This is a memory strategy, developed based on a memory-assisted tutorial for psychology. It is a small gift made by a representative of the psychology department.\n\n";
 				cout<<"development team\n";
