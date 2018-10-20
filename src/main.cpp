@@ -67,6 +67,89 @@ int rc()
     int cl=rand()%15+1;
     return cl;
 }
+#include <bits/stdc++.h>
+#include <windows.h>
+#include <conio.h>
+using namespace std;
+void c(string str,int n)
+{
+	color(n);
+	cout<<str<<endl;
+	color(7);
+}
+
+void menu()
+{
+	system("cls");
+	int sn=127,co=7,re=7;
+	char a;
+	while(1){
+		system("mode con cols=130 lines=50");
+		system("cls");
+		c("--------------------",7);
+		c("|       菜单       |",7);
+		c("--------------------",7);
+		c("|    1.开始游戏    |",sn);
+		c("|                  |",7);
+		c("|     2.关于作者   |",co);
+		c("|                  |",7);
+		c("|       q.退出     |",re);
+		c("--------------------",7);
+		a=getch();
+		if(a=='w'||a=='W')
+			if(sn==127){
+				sn=7;
+				re=127;
+			}
+			else if(co==127){
+				co=7;
+				sn=127;
+			}
+			else if(re==127){
+				re=7;
+				co=127;
+			}
+		if(a=='s'||a=='S')
+			if(sn==127){
+				sn=7;
+				co=127;
+			}
+			else if(co==127){
+				co=7;
+				re=127;
+			}
+			else if(re==127){
+				re=7;
+				sn=127;
+			}
+		if(a==13)
+			if(sn==127){
+				return ;
+			}
+			else if(co==127){
+				CLS;
+				cout<<"GitHub:https://github.com/ChinaMacrohard/Memory-strategy\n";
+				cout<<"what is this?\n";
+				cout<<"This is a memory strategy, developed based on a memory-assisted tutorial for psychology. It is a small gift made by a representative of the psychology department.\n\n";
+				cout<<"development team\n";
+				cout<<"Development Team: NT Development Team of Zhejiang Macrohard Technology Co., Ltd.\n\n";
+				cout<<"Project staff:\n";
+				cout<<"Person in charge: Los\n";
+				cout<<"Chief Developer: Los\n";
+				cout<<"Project finishing: Macrohard\n";
+				cout<<"Chief Consultant: Sky\n\n";
+				cout<<"Copyright and statement\n";
+				cout<<"The entire contents of this software are provided under the terms of the MIT Open Source License and additional terms may apply.\n\n";
+				cout<<"Warning: It is strictly forbidden to use the relevant content of this software to endanger the People's Republic of China and the international community. Offenders will be subject to legal sanctions.\n";
+				system("pause");
+			}
+			else if(re==127)
+			{
+				exit(0);
+			}
+		
+	}
+}
 
 int len,speed,cnt=1,now=0,nx,ny;
 Button px[100][100];
@@ -76,6 +159,7 @@ short flag=2;
 int main()
 {
 	system("title 记忆攻略 github:ChinaMacrohard");
+	menu();
 	srand((unsigned)time(NULL));
 	hind_cursor();
 	cout<<"Speed(seconds):";
@@ -132,5 +216,7 @@ int main()
 	while(flag!=0);
 	CLS;
 	cout<<"You lost!"<<endl<<"You have played "<<cnt-1<<" turns."<<endl;
+	system("pasue");
+	menu();
 	return 0;
 }
